@@ -1,18 +1,14 @@
 import './App.css';
-import Navbar from './components/navbar.jsx';
+import Navbar from "./components/Navbar/Navbar.jsx";
+import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner.jsx';
 
-function App(){
+function App() {
   return (
     <>
-
-    <Navbar/>
-    <div>
-      <h1>Mi Iphone</h1>
-      <h2>Tienda de celulares y accesorios</h2>
-    </div>
-
+    <Navbar />
+    <ItemListConteiner greeting= {'bienvenidos a nuestra tienda...'} />
     </>
-  )
+  );
 }
 
 export default App

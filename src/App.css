@@ -1,5 +1,50 @@
-* {
-  box-sizing: border-box;
-  margin: 0 ;
-  padding: 0;
+.conteiner-master{
+  background-color:rgb(245, 248, 245) ;
+}
+.logo{
+  color: rgb(30, 79, 11);
+  font-size: 50px;
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(to bottom,rgb(70, 233, 70),rgb(245, 248, 245))  ;
+}
+.navItems {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgb(245, 248, 245);;
+}
+.navItem{
+  cursor: pointer;
+  padding: 5px;
+  background-color: rgb(145, 243, 157);
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 5px;
+  margin: 10px;
+  
+}
+
+.cartConteiner{
+  background-color: rgb(161, 235, 161);
+  display: flex;
+  position: fixed;
+  padding: 3px;
+  top: 5px;
+  border-radius: 10px;
+  border: solid black 1px;
+  cursor: pointer;
+}
+.cart{
+  width: 40px;;
+}
+
+.titleWelcome {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 200;
+  margin: 20px;
+  color: rgb(5, 50, 5);
 }
