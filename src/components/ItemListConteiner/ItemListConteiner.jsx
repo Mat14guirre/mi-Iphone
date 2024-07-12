@@ -1,10 +1,12 @@
+import ItemList from "./ItemList/ItemList.jsx"
 
 const ItemListConteiner = ({greeting}) => {
     return (
         <>
-        
-        <h1 className="titleWelcome"> {greeting} </h1>
-        
+        <div className="itemListConteiner">
+            <h1 className="titleWelcome"> {greeting} </h1>
+            <ItemList/>
+        </div>
         </>
     )
 }

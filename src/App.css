@@ -19,11 +19,11 @@
   cursor: pointer;
   padding: 5px;
   background-color: rgb(145, 243, 157);
-  font-size: 10px;
+  font-size: 20px;
   font-weight: 600;
   border-radius: 5px;
   margin: 10px;
-  
+  box-shadow: 0 4px 10px rgb(51, 53, 51);
 }
 
 .cartConteiner{
@@ -35,9 +35,11 @@
   border-radius: 10px;
   border: solid black 1px;
   cursor: pointer;
+  box-shadow: 0 4px 10px rgb(51, 53, 51);
 }
 .cart{
-  width: 40px;;
+  width: 40px;
+  
 }
 
 .titleWelcome {
@@ -47,4 +49,54 @@
   font-weight: 200;
   margin: 20px;
   color: rgb(5, 50, 5);
+}
+.button-conteiner-categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgb(128, 245, 128);
+  border: 1px solid rgb(26, 106, 4);
+  padding: 5px;
+  box-shadow: 0 4px 10px rgb(51, 53, 51);
+}
+
+.itemList{
+  cursor: pointer;
+  color: rgb(3, 98, 31);
+  font-size: 18px;
+  border: 2px solid rgb(106, 244, 106);
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.card {
+  border: 1 px solid black;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgb(51, 53, 51);
+  margin: 20px;
+  width: 300px;
+  height: 400px;
+}
+
+.card-header {
+  color: white;
+  background-color: rgb(2, 68, 31);
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+.card-body{
+  padding: 10px;
+  color: darkgreen;
+  font-size: 18px;
+  text-align: center;
+
+}
+.card-footer {
+  color: rgb(4, 36, 12);
+  background-color: rgb(159, 196, 175);
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
 }
