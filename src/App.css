@@ -50,16 +50,7 @@
   margin: 20px;
   color: rgb(5, 50, 5);
 }
-.button-conteiner-categories {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: rgb(128, 245, 128);
-  border: 1px solid rgb(26, 106, 4);
-  padding: 5px;
-  box-shadow: 0 4px 10px rgb(51, 53, 51);
-}
+
 
 .itemList{
   cursor: pointer;
@@ -70,33 +61,19 @@
   padding: 2px;
 }
 
-.card {
-  border: 1 px solid black;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgb(51, 53, 51);
-  margin: 20px;
-  width: 300px;
-  height: 400px;
+.Counter {
+  display: inline-block;
 }
 
-.card-header {
-  color: white;
-  background-color: rgb(2, 68, 31);
-  padding: 10px;
-  font-weight: bold;
-  text-align: center;
+.Controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
-.card-body{
-  padding: 10px;
-  color: darkgreen;
-  font-size: 18px;
-  text-align: center;
 
-}
-.card-footer {
-  color: rgb(4, 36, 12);
-  background-color: rgb(159, 196, 175);
-  padding: 10px;
-  font-weight: bold;
-  text-align: center;
+.Button {
+  background-color: rgb(18, 243, 85);
+  padding: 4px;
+  border-radius: 5px;
 }

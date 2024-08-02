@@ -1,18 +1,14 @@
-import { categories } from "../../../mock/mockData"
+/* eslint-disable react/prop-types */
+import Item from '../ItemList/Item/Item.jsx'
 
-const ItemList = ()=> {
+// eslint-disable-next-line react/prop-types
+const ItemList = ({products})=> {
     return (
         <>
-        <div className="button-conteiner-categories">
-        <button className="itemList"> {categories[1]} </button>
-        <button className="itemList"> {categories[2]} </button>
-        <button className="itemList"> {categories[3]} </button>
-        <button className="itemList"> {categories[4]} </button>
-        <button className="itemList"> {categories[0]} </button>
-        <button className="itemList"> {categories[5]} </button>
+        <div className="ListGroup">
+            {products.map (prod => <Item key={prod.id} {...prod}/>)}
         </div>
-       
-        </>
+       </>
     ) 
 }
 

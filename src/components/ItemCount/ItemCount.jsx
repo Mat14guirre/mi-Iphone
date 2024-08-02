@@ -1,30 +1,39 @@
 import { useState } from "react";
 
-const ItemCount = () => {
+// eslint-disable-next-line react/prop-types
+const ItemCount = ({stock,initial,onAdd} ) => {
 
-    const [qty, setQty] = useState (1);
-    const handleClick = (op) => {
-        op=== "-" ? clickMenos() : clickMas();
-    };
+    const [qty, setQty] = useState (initial);
 
-    const clickMenos = ()=> {
-        if (qty ===1) {
-            alert ("No se puede elegir menos de una unidad");
-            return;
+    const increment = () => {
+        if (qty < stock ){
+            setQty (qty+1)
         }
-        setQty (qty - 1);
     };
 
-    const clickMas = () =>{
-        setQty (qty + 1);
-    }
+    const decrement = () => {
+        if (qty > 1) {
+            setQty (qty-1 )
+        }
+    };
+
     return (
-        <div>
-            <button onClick={ ()=> handleClick('-') } >-</button>
-            <span> {qty} </span>
-            <button onClick={ ()=> handleClick('+') }>+</button>
+        <div className="Counter">
+
+            <div className="Controls">
+                <button className="Button" onClick={decrement} > - </button>
+                <h4 className="Number"> {qty} </h4>
+                <button className="Button" onClick={increment}> + </button>
+            </div>
+            <div>
+                <button className="Button" onClick={ () => onAdd(qty) } disabled ={!stock}>
+                    Agregar al carrito
+                </button>
+            </div>
+
         </div>
     )
-}
+
+};   
 
 export default ItemCount;
