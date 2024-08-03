@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line react/prop-types, no-unused-vars
-const Item = ({id,name,price,stock}) => {
+const Item = ({id,name,price,stock,image}) => {
     return (
         <> 
          <article className="CardItem">
@@ -10,9 +10,7 @@ const Item = ({id,name,price,stock}) => {
                 </h2>
             </header>
             <section>
-                <p className="Price">
-                    Precio: ${price}
-                </p>
+                
                 <p className="Stock">
                     Stock disponible: {stock}
                 </p>

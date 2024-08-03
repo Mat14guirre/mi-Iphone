@@ -1,7 +1,7 @@
 import ItemCount from "../ItemCount/ItemCount.jsx";
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
-const ItemDetail= ({id,name,img,category,description,price,stock}) => {
+const ItemDetail= ({id,name,category,description,price,stock}) => {
     return(
         <>
          <article className="CardItem">
@@ -19,6 +19,9 @@ const ItemDetail= ({id,name,img,category,description,price,stock}) => {
                 </p>
                 <p className="Info">
                     Descripcion: {description}
+                </p>
+                <p className="info">
+                    Stock= {stock}
                 </p>
             </section>
             <footer className="ItemFooter" >
