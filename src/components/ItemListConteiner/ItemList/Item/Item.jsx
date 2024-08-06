@@ -1,18 +1,18 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 // eslint-disable-next-line react/prop-types, no-unused-vars
-const Item = ({id,name,price,stock,image}) => {
+const Item = ({product}) => {
     return (
         <> 
          <article className="CardItem">
             <header className="Header">
                 <h2 className="ItemHeader">
-                    {name}
+                    {product.name}
                 </h2>
             </header>
             <section>
-                
-                <p className="Stock">
-                    Stock disponible: {stock}
+                <p className="Precio">
+                    Precio:$ {product.price}
                 </p>
             </section>
             <footer className="ItemFooter" >

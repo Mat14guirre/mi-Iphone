@@ -1,11 +1,12 @@
+import { NavLink } from "react-router-dom"
 import cart from "./assets/cart.svg"
 const CartWidget = () => {
     return (
         <>
-        <button className="cartConteiner">
+        <NavLink className="cartConteiner">
             <img className='cart' src= {cart} alt="cart-widget" />
             0
-        </button>
+        </NavLink>
         </>
     )
 }

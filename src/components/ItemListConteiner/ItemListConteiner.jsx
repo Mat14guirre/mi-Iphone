@@ -1,21 +1,27 @@
 import { useState,useEffect } from "react" 
-import {getProducts} from '../../mock/mockData.js'
+import { getProducts } from "../fetchData/fetchData.js"
 import ItemList from "./ItemList/ItemList.jsx"
+import { useParams } from "react-router-dom"
 
 
 // eslint-disable-next-line react/prop-types
 const ItemListConteiner = ({greeting}) => {
     const [products,setProducts] = useState([])
     
+    const{categoryId}=useParams()
+    
     useEffect(()=> {
-        getProducts()
-        .then(response=> {
+        getProducts(categoryId)
+        .then((response)=> {
             setProducts(response)
         })
-        .catch (error => {
-            console.error(error)
+        .catch ((err) => {
+            console.log(err)
         })
-    }, [])
+        .finally(()=>{
+            console.log('finalizo la promesa')
+        })
+    }, [categoryId])
 
     return (
         <>

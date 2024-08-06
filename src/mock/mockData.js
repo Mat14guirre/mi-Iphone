@@ -1,9 +1,11 @@
-const products = [
+export const categories = ['Inicio','Celulares','Notebooks','Tablets','Accesorios','Contacto','Nosotros']
+
+export const items= [
     {
         id:'1',
         name: 'IPhone 11',
         description:'descripcion del iphone 11',
-        category:'celulares',
+        category:['Celulares'],
         price: '700',
         stock:'25'
     },
@@ -11,7 +13,7 @@ const products = [
         id:'2',
         name:'IPhone 12',
         description:'descripcion del iphone 12',
-        category:'celulares',
+        category:['Celulares'],
         price: '850',
         stock: '10'
     },
@@ -19,7 +21,7 @@ const products = [
         id:'3',
         name:'IPhone 13',
         description:'descripcion del iphone 13',
-        category:'celulares',
+        category:['Celulares'],
         price: '1000',
         stock:'18'
     },
@@ -27,7 +29,7 @@ const products = [
         id:'4',
         name:'Auriculares',
         description:'descripcion de auriculares',
-        category:'accesorios',
+        category:['Accesorios'],
         price: '150',
         stock: '43'
     },
@@ -35,7 +37,7 @@ const products = [
         id:'5',
         name:'IPad',
         description:'descripcion del ipad',
-        category:'tablets',
+        category:['Tablets'],
         price: '1000',
         stock:'14'
     },
@@ -43,24 +45,11 @@ const products = [
         id:'6',
         name: 'MacBook',
         description:'descripcion de la Macbook',
-        category:'notebooks',
+        category:['Notebooks'],
         price: '1900',
         stock:'23'
     }
 ]
 
-export const getProducts = () => {
-    return new Promise ((resolve)=> {
-        setTimeout(() => {
-            resolve(products)
-        }, 500);
-    })
-}
 
-export const getProductById=(productId)=> {
-    return new Promise((resolve)=>{
-        setTimeout(()=>{
-            resolve(products.find(prod=> prod.id === productId))
-        },500)
-    })
-}
+

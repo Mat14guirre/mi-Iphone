@@ -15,7 +15,9 @@
   flex-wrap: wrap;
   background-color: rgb(245, 248, 245);;
 }
-.navItem{
+.NavItem{
+  all: unset;
+  text-decoration: none;
   cursor: pointer;
   padding: 5px;
   background-color: rgb(145, 243, 157);
@@ -25,7 +27,9 @@
   margin: 10px;
   box-shadow: 0 4px 10px rgb(51, 53, 51);
 }
-
+.active{
+  background-color: rgb(42, 165, 58);
+}
 .cartConteiner{
   background-color: rgb(161, 235, 161);
   display: flex;

@@ -1,15 +1,17 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable react/prop-types */
 import CartWidget from "../CartWidget/CartWidget.jsx"
+import NavbarLink from "./NavbarLink/NavbarLink.jsx";
+import { categories } from "../../mock/mockData.js";
 
 const Navbar = () => {
     return (
         <>
         <h3 className="logo">MIPhone <img width="50" height="50" src="https://img.icons8.com/bubbles/50/iphone-x.png" alt="iphone-x"/></h3>
         <nav className= 'navItems'> 
-                <button className= 'navItem'>Celulares</button>
-                <button className= 'navItem'>Notebooks</button>
-                <button className= 'navItem'>Accesorios</button>
-                <button className= 'navItem'>Contacto</button>
-                <button className= 'navItem'>Nosotros</button>
+                {categories.map((element,index)=>{
+                    return <NavbarLink key ={index} category={element}/>
+                })}
         </nav>
         <CartWidget/>
         </>
