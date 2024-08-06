@@ -2,36 +2,36 @@ export const categories = ['Inicio','Celulares','Notebooks','Tablets','Accesorio
 
 export const items= [
     {
-        id:'1',
+        id:1,
         name: 'IPhone 11',
         description:'descripcion del iphone 11',
         category:['Celulares'],
-        price: '700',
-        stock:'25'
+        price: 700,
+        stock:25
     },
     {
-        id:'2',
+        id:2,
         name:'IPhone 12',
         description:'descripcion del iphone 12',
         category:['Celulares'],
-        price: '850',
-        stock: '10'
+        price: 850,
+        stock: 10
     },
     {
-        id:'3',
+        id:3,
         name:'IPhone 13',
         description:'descripcion del iphone 13',
         category:['Celulares'],
-        price: '1000',
+        price: 1000,
         stock:'18'
     },
     {
-        id:'4',
+        id:4,
         name:'Auriculares',
         description:'descripcion de auriculares',
         category:['Accesorios'],
-        price: '150',
-        stock: '43'
+        price: 150,
+        stock: 43
     },
     {
         id:'5',
@@ -42,12 +42,12 @@ export const items= [
         stock:'14'
     },
     {
-        id:'6',
+        id:6,
         name: 'MacBook',
         description:'descripcion de la Macbook',
         category:['Notebooks'],
-        price: '1900',
-        stock:'23'
+        price: 1900,
+        stock:23
     }
 ]
 

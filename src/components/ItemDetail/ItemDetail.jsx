@@ -1,7 +1,7 @@
 import ItemCount from "../ItemCount/ItemCount.jsx";
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
-const ItemDetail= ({id,name,category,description,price,stock}) => {
+const ItemDetail= ({name,category,description,price,stock}) => {
     return(
         <>
          <article className="CardItem">
@@ -14,7 +14,7 @@ const ItemDetail= ({id,name,category,description,price,stock}) => {
                 <p className="info">
                     Categoria: {category}
                 </p>
-                <p className="Info">
+                <p className="Precio"> 
                     Precio: ${price}
                 </p>
                 <p className="Info">
@@ -25,7 +25,7 @@ const ItemDetail= ({id,name,category,description,price,stock}) => {
                 </p>
             </section>
             <footer className="ItemFooter" >
-            <ItemCount initial={1} stock={10} onAdd= { (qty) => console.log ("cantidad agregada",qty)}/>
+            <ItemCount initial={1} stock={10} onAdd= { (qty) => console.log ('agregado al carrito',qty)}/>
             </footer>
 
         </article>

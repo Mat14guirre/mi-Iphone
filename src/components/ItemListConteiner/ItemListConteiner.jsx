@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom"
 // eslint-disable-next-line react/prop-types
 const ItemListConteiner = ({greeting}) => {
     const [products,setProducts] = useState([])
-    
+
     const{categoryId}=useParams()
     
     useEffect(()=> {
@@ -18,9 +18,7 @@ const ItemListConteiner = ({greeting}) => {
         .catch ((err) => {
             console.log(err)
         })
-        .finally(()=>{
-            console.log('finalizo la promesa')
-        })
+        
     }, [categoryId])
 
     return (

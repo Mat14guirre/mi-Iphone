@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 // eslint-disable-next-line react/prop-types, no-unused-vars
@@ -16,7 +18,9 @@ const Item = ({product}) => {
                 </p>
             </section>
             <footer className="ItemFooter" >
-                <button className="Option">ver detalle</button>
+                <Link to= {`/product/${product.id}`} >
+                    <button>ver detalle </button>
+                </Link>
             </footer>
 
         </article>

@@ -1,6 +1,12 @@
 .conteiner-master{
   background-color:rgb(245, 248, 245) ;
 }
+h1{
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(59, 49, 49);
+  font-weight: 300;
+}
 .logo{
   color: rgb(30, 79, 11);
   font-size: 50px;
@@ -92,3 +98,16 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgb(51, 53, 51);
  }
+ .ItemHeader{
+  color: rgb(5, 10, 3);
+  padding: 10px;
+ }
+ .info{
+  font-size: 10px;
+  color: rgb(4, 87, 22);
+}
+.Precio{
+  color: azure;
+  padding: 10px;
+  
+}
