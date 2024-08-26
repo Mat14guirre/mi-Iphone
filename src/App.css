@@ -86,7 +86,8 @@ h1{
 }
 
 .Button {
-  background-color: rgb(18, 243, 85);
+  background-color: rgb(3, 82, 20);
+  color: beige;
   padding: 4px;
   border-radius: 5px;
 }
@@ -100,9 +101,23 @@ h1{
  .CardItem{
   display: inline-block;
   text-align: center;
-  background-color: rgb(84, 206, 84);
+  background-color: rgb(167, 197, 167);
   width: 300px;
-  height: 300px;
+  height: 420px;
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgb(51, 53, 51);
+ }
+ .image-detail {
+  width: 100%;
+  align-items: center;
+ }
+ .CardItem-detail{
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(107, 196, 107);
+  width: 400px;
+  height: 650px;
   margin: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgb(51, 53, 51);
@@ -119,4 +134,36 @@ h1{
   color: azure;
   padding: 10px;
   
+}
+.image-spinner {
+  text-align: center;
+}
+.tabla2{
+  border: 3px solid black;
+  padding: 10px;
+  background-color: rgb(1, 71, 5);
+  color: bisque;
+  border-radius: 5px;
+}
+.tabla4{
+  margin: 10px;
+  background-color: rgb(10, 100, 22);
+  padding: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: beige;
+  border-radius: 4px;
+}
+.tabla5 {
+  margin: 10px;
+  background-color: rgb(36, 138, 49);
+  padding: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: beige;
+  border-radius: 4px;
+}
+
+.img-producto{
+  width: 90%;
 }

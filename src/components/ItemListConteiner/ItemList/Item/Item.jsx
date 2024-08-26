@@ -12,6 +12,7 @@ const Item = ({product}) => {
                     {product.name}
                 </h2>
             </header>
+            <img  className="img-producto" src= {product.image} alt="" />
             <section>
                 <p className="Precio">
                     Precio:$ {product.price}
@@ -19,7 +20,7 @@ const Item = ({product}) => {
             </section>
             <footer className="ItemFooter" >
                 <Link to= {`/product/${product.id}`} >
-                    <button>ver detalle </button>
+                    <button className="Button" >ver detalle </button>
                 </Link>
             </footer>
 

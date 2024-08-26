@@ -14,7 +14,7 @@ export const getProducts = (category) => {
       if (items.length > 0) {
         setTimeout(() => {
           resolve(filteredItems);
-        }, 2000);
+        }, 800);
       } else {
         reject("No hay productos disponibles");
       }
@@ -31,6 +31,6 @@ export const getProducts = (category) => {
         } else {
           reject("No se encontro el producto");
         }
-      }, 1000);
+      }, 800);
     });
   }
