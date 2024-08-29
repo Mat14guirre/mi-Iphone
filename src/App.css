@@ -171,3 +171,18 @@ h1{
 .img-producto{
   width: 90%;
 }
+
+.Funcion-agregar-productos{
+  display: none;
+}
+
+.copyright{
+  color: rgb(2, 87, 2);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+.finalizar-form{
+  border-color: black;
+  margin: 12px;
+}

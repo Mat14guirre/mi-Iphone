@@ -79,10 +79,13 @@ const Cart= ()=>{
         </Table>
         <button className="Button" onClick={handleClearCart}>Borrar Carrito</button>
 
-        <input type="text" name="name" id="name" placeholder="ingrese su nombre" onChange={(e)=>handleOnChange(e)} />
-        <input type="number" name="tel" id="tel" placeholder="ingrese su telefono" onChange={(e)=>handleOnChange(e)} />
-        <input type="email" name="email" id="email" placeholder="ingrese su email" onChange={(e)=>handleOnChange(e)} />
-        <button onClick={handleSaveCart}> Finalizar compra</button>
+        <div>
+            <input className="finalizar-form" type="text" name="name" id="name" placeholder="ingrese su nombre" onChange={(e)=>handleOnChange(e)} />
+            <input className="finalizar-form" type="number" name="tel" id="tel" placeholder="ingrese su telefono" onChange={(e)=>handleOnChange(e)} />
+            <input className="finalizar-form" type="email" name="email" id="email" placeholder="ingrese su email" onChange={(e)=>handleOnChange(e)} />
+            <button className="Button" onClick={handleSaveCart}> Finalizar compra</button>
+            
+        </div>
         </>
     )    
 }

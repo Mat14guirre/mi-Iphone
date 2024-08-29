@@ -18,7 +18,11 @@ const Footer=()=>{
     return(
         <>
         <footer>
-            <button onClick={addProducts}>agregar productos a base de datos</button>
+            <div>
+
+                <p className="copyright">Copyright: Matias Ezequiel Aguirre- todos los derechos reservados</p>
+            </div>
+            <button className="Funcion-agregar-productos" onClick={addProducts}>agregar productos a base de datos</button>
         </footer>
         </>
     )
