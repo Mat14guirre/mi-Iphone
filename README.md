@@ -1,7 +1,7 @@
 ## MI-IPhone
 Tienda online de productos tecnologicos de primera marca.
 
-#Tecnologias usadas
+#Tecnologias usadas: 
 Proyecto creado con React.js y vite (Proyecto educativo), CSS,HTML,JAVASCRIPT. 
 
 #Creacion
