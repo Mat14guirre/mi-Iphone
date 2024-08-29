@@ -4,8 +4,10 @@ import {useState,useEffect,createContext,useContext} from 'react'
 
 const cartContext= createContext()
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const {Provider} = cartContext 
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useCartContext= () => {
     return useContext (cartContext)
 }

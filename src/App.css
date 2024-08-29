@@ -84,7 +84,6 @@ h1{
   align-items: center;
   padding: 5px;
 }
-
 .Button {
   background-color: rgb(3, 82, 20);
   color: beige;
@@ -107,6 +106,10 @@ h1{
   margin: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgb(51, 53, 51);
+ }
+ .ItemDetailConteiner{
+  display: flex;
+  justify-content: center;
  }
  .image-detail {
   width: 100%;
@@ -131,7 +134,8 @@ h1{
   color: rgb(4, 87, 22);
 }
 .Precio{
-  color: azure;
+  color: rgb(6, 43, 2);
+  font-weight: 600;
   padding: 10px;
   
 }

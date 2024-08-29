@@ -1,14 +1,48 @@
 import { Table } from "react-bootstrap"
 import { useCartContext } from "../../context/CartContext"
+import { useState } from "react"
+import { addDoc, collection } from "firebase/firestore"
+import { db } from "../../firebase/dbConnection"
 
 const Cart= ()=>{
     const{cart,total,removeItem,clearCart}= useCartContext()
+
+    const [formData,setFormData]= useState({name:"",tel:"",email:""})
 
     const handleRemoveItem= (id,price,qty)=>{
         removeItem(id,price,qty)
     }
     const handleClearCart=()=>{
         clearCart()
+    }
+
+    const handleOnChange = (e)=>{
+        setFormData({...formData, [e.target.name]: e.target.value})
+    }
+
+    const handleSaveCart=()=>{
+        console.log("Saving in database")
+        console.log("formData",formData)
+        console.log("cart", cart)
+
+        const orderCollection= collection(db,"orders")
+        const newOrder={
+            buyer:formData,
+            items: cart,
+            date: new Date(),
+            total:total
+        }
+
+        addDoc(orderCollection,newOrder)
+        .then((doc)=>{
+            alert("Compra exitosa, orden: " + doc.id)
+            console.log("order saved with id: " + doc.id)
+            clearCart()
+            setFormData({name:"", tel:"",email:""})
+        })
+        .catch((error)=>{
+            console.error("error adding document: " , error)
+        })
     }
     return (
         <>
@@ -44,6 +78,11 @@ const Cart= ()=>{
           </tbody>
         </Table>
         <button className="Button" onClick={handleClearCart}>Borrar Carrito</button>
+
+        <input type="text" name="name" id="name" placeholder="ingrese su nombre" onChange={(e)=>handleOnChange(e)} />
+        <input type="number" name="tel" id="tel" placeholder="ingrese su telefono" onChange={(e)=>handleOnChange(e)} />
+        <input type="email" name="email" id="email" placeholder="ingrese su email" onChange={(e)=>handleOnChange(e)} />
+        <button onClick={handleSaveCart}> Finalizar compra</button>
         </>
     )    
 }

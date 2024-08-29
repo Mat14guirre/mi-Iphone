@@ -1,5 +1,6 @@
-import { useState,useEffect } from "react" 
-import { getProducts } from "../fetchData/fetchData.js"
+import { useState,useEffect } from "react"
+import {collection,getDocs,query,where} from "firebase/firestore" 
+import { db } from "../../firebase/dbConnection.js"
 import ItemList from "./ItemList/ItemList.jsx"
 import { useParams } from "react-router-dom"
 import { Spinner } from "../spinner/Spinner.jsx"
@@ -14,17 +15,24 @@ const ItemListConteiner = ({greeting}) => {
     
     useEffect(()=> {
         setLoading(true)
-        getProducts(categoryId)
-        .then((response)=> {
-            setProducts(response)
-        })
-        .catch ((err) => {
-            console.log(err)
-        })
-        .finally(()=>{
-            setLoading(false)
-        })
-        
+        let productsCollection=collection(db,"productos")
+
+        if(categoryId){
+            productsCollection = query(productsCollection,where("category","array-contains",categoryId))
+        }
+        getDocs(productsCollection)
+            .then(({docs})=>{
+                const prodFromDocs= docs.map((doc)=>({
+                    id:doc.id,
+                    ...doc.data()
+                }))
+                setProducts(prodFromDocs)
+                setLoading(false)
+            })
+            .catch((error)=>{
+                console.error("error getting documents: ",error)
+            })
+
     }, [categoryId])
 
     return (
@@ -33,7 +41,7 @@ const ItemListConteiner = ({greeting}) => {
             <h1 className="titleWelcome"> {greeting} </h1>
             {loading 
             ? <Spinner/>
-        :<ItemList products={products} />}
+            :<ItemList products={products} />}
             
         </div>
         </>
