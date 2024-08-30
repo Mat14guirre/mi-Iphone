@@ -2,12 +2,12 @@ import ItemCount from "../ItemCount/ItemCount.jsx";
 import { useCartContext } from "../../context/CartContext.jsx";
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
-const ItemDetail= ({id,name,category,description,price,stock,image}) => {
+const ItemDetail= ({name,category,description,price,stock,image}) => {
     const {addToCart} = useCartContext()
 
     const onAdd = (qty) => {
         console.log (`se agregaron ${qty} productos al carrito`)
-        const item = {id,name,description,price}
+        const item = {name,description,price}
         addToCart (item,qty)
     }
 
