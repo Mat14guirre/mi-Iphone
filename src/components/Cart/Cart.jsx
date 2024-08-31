@@ -3,6 +3,7 @@ import { useCartContext } from "../../context/CartContext"
 import { useState } from "react"
 import { addDoc, collection } from "firebase/firestore"
 import { db } from "../../firebase/dbConnection"
+import swal from 'sweetalert';
 
 const Cart= ()=>{
     const{cart,total,removeItem,clearCart}= useCartContext()
@@ -35,7 +36,7 @@ const Cart= ()=>{
 
         addDoc(orderCollection,newOrder)
         .then((doc)=>{
-            alert("Compra exitosa, orden: " + doc.id)
+            swal("Gracias por tu compra",( "codigo de orden: " + doc.id), "success");
             console.log("order saved with id: " + doc.id)
             clearCart()
             setFormData({name:"", tel:"",email:""})
